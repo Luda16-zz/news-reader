@@ -18,6 +18,7 @@ export default class NewsItem extends Component {
 			date,
 			location,
 			description,
+			onPress
 			} = this.props;
 		const accentColor = globalStyles.ACCENT_COLORS[
 			this.props.index % globalStyles.ACCENT_COLORS.length
@@ -25,6 +26,7 @@ export default class NewsItem extends Component {
 	return (
 		<TouchableOpacity
 			style={style}
+			onPress={onPress}
 		>
 			<View>
 				<Thumbnail
@@ -57,7 +59,7 @@ NewsItem.propTypes = {
 	author: PropTypes.string.isRequired,
 	location: PropTypes.string,
 	index: PropTypes.number.isRequired,
-	onPress: PropTypes.func.isRequired,
+	onPress: PropTypes.func.isRequired,	
 	style: View.propTypes.style
 };
 
