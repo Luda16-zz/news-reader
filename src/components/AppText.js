@@ -1,4 +1,4 @@
-//Componen
+//Component
 
 import React, { PropTypes } from 'react';
 import { Text } from 'react-native';
