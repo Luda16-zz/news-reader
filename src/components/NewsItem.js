@@ -9,6 +9,15 @@ import AppText from './AppText';
 import Thumbnail from './Thumbnail';
 import * as globalStyles from '../styles/global';
 export default class NewsItem extends Component {
+
+	constructor(props) {
+		super(props);
+		this.onLongPress = this.onLongPress.bind(this);
+	}
+	onLongPress() {
+	// Open action sheet
+	}
+
 	render() {
 		const {
 			style,
@@ -27,6 +36,7 @@ export default class NewsItem extends Component {
 		<TouchableOpacity
 			style={style}
 			onPress={onPress}
+			onLongPress={this.onLongPress}
 		>
 			<View>
 				<Thumbnail
